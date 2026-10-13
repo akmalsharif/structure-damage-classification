@@ -1,0 +1,58 @@
+# Data besar
+data/*.csv
+data/*.xlsx
+data/*.json
+!data/.gitkeep
+
+# Raw competition files (jika tidak ingin commit)
+train.csv
+test.csv
+sample_submission.csv
+
+# Models and artifacts
+models/
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.onnx
+
+# Notebooks outputs and checkpoints
+.ipynb_checkpoints/
+notebooks/*.nbconvert.ipynb
+outputs/
+figures/
+plots/
+
+# Scripts build / caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+
+# Virtual env and env files
+.venv/
+venv/
+.env
+.env.*
+
+# Packaging
+*.egg-info/
+.eggs/
+dist/
+build/
+*.whl
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Submissions folder can be kept but ignore intermediate temp files
+submissions/*.tmp
+submissions/*.zip
