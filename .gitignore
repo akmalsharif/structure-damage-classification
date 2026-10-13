@@ -2,6 +2,7 @@
 data/*.csv
 data/*.xlsx
 data/*.json
+data/*.zip
 !data/.gitkeep
 
 # Raw competition files (jika tidak ingin commit)

@@ -11,6 +11,36 @@ bangunan dan lokasi. Target `damage_grade` berisi lima kelas: `Grade 1` sampai
 - `data/sample_submission.csv`: contoh format dan label submission.
 - `data/metadata.csv`: deskripsi kolom pada dataset.
 
+## Mengunduh Data dari Kaggle
+
+Data tersedia di halaman [Structural Damage Classification di Kaggle](https://www.kaggle.com/competitions/structural-damage-classification/data).
+Login ke Kaggle dan setujui aturan kompetisi sebelum mengunduh data.
+
+Pasang Kaggle CLI di virtual environment proyek:
+
+```powershell
+python -m pip install kaggle
+```
+
+Autentikasi satu kali dengan API token Kaggle:
+
+1. Buka pengaturan akun Kaggle, bagian **API**, lalu buat/download token API.
+2. Simpan file `kaggle.json` di `%USERPROFILE%\.kaggle\kaggle.json`.
+   Buat folder `.kaggle` jika belum ada.
+3. Jangan masukkan atau membagikan file token tersebut ke repository.
+
+Dari root proyek, unduh dan ekstrak arsip:
+
+```powershell
+New-Item -ItemType Directory -Force data | Out-Null
+kaggle competitions download -c structural-damage-classification -p data
+Expand-Archive -Path data\structural-damage-classification.zip -DestinationPath data -Force
+```
+
+Pastikan `data\train.csv`, `data\test.csv`, dan
+`data\sample_submission.csv` tersedia. File data dan arsip ZIP di folder `data`
+diabaikan oleh Git.
+
 Training memakai `scripts/feature_engineering.py` dan
 `scripts/preprocess.py` untuk menyelaraskan fitur train dan test. Kolom ID
 `building_id` dan target tidak dipakai sebagai fitur; ID tetap disertakan pada
