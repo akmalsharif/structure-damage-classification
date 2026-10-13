@@ -70,7 +70,7 @@ Contoh format:
 
 ```csv
 building_id,damage_grade
-122207000141,Grade 3
-284909000871,Grade 1
-241904000231,Grade 5
+122207000141, 3
+284909000871, 1
+241904000231, 5
 ```
